@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/go_code.iml" filepath="$PROJECT_DIR$/.idea/go_code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learngo/learngo.iml" filepath="$PROJECT_DIR$/learngo/learngo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
