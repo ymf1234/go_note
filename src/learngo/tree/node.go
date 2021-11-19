@@ -9,7 +9,7 @@ type Node struct {
 }
 
 func (node Node) Print()  {
-	fmt.Println(node.Value)
+	fmt.Printf("%d ", node.Value)
 }
 
 func (node *Node) SetValue(value int) {

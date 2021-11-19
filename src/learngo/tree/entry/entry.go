@@ -19,6 +19,7 @@ import (
 	 如何扩展系统类型或者别人的类型
 		定义别名
 		使用组合
+        使用内嵌
  */
 
 type myTreeNode struct {
