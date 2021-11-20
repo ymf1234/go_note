@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/go_code.iml" filepath="$PROJECT_DIR$/.idea/go_code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gomodtest/gomodtest.iml" filepath="$PROJECT_DIR$/gomodtest/gomodtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/learngo/learngo.iml" filepath="$PROJECT_DIR$/learngo/learngo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learngos/learngos.iml" filepath="$PROJECT_DIR$/learngos/learngos.iml" />
     </modules>
   </component>
 </project>
