@@ -6,11 +6,11 @@ import (
 	"os"
 )
 
-type addHandler func(writer http.ResponseWriter, request *http.Response) error
+type addHandler func(writer http.ResponseWriter, request *http.Request) error
 
-func errWrapper(handler addHandler) func(http.ResponseWriter, *http.Response) {
-	return func(writer http.ResponseWriter, response *http.Response) {
-		err := handler(writer, response)
+func errWrapper(handler addHandler) func(http.ResponseWriter, *http.Request) {
+	return func(writer http.ResponseWriter, request *http.Request) {
+		err := handler(writer, request)
 		if err != nil {
 			code := http.StatusOK
 			switch {
@@ -26,8 +26,7 @@ func errWrapper(handler addHandler) func(http.ResponseWriter, *http.Response) {
 }
 
 func main() {
-	http.HandleFunc("/list/",
-		errWrapper(filelisting.HandleFileList))
+	http.HandleFunc("/list/", errWrapper(filelisting.HandleFileList))
 
 	err := http.ListenAndServe(":8888", nil)
 	if err != nil {
