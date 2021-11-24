@@ -12,10 +12,15 @@ func errWrapper(handler addHandler) func(http.ResponseWriter, *http.Response) {
 	return func(writer http.ResponseWriter, response *http.Response) {
 		err := handler(writer, response)
 		if err != nil {
+			code := http.StatusOK
 			switch {
 			case os.IsNotExist(err):
-				http.Error(writer, http.StatusText(http.StatusNotFound))
+				//http.Error(writer, http.StatusText(http.StatusNotFound), http.StatusNotFound)
+				code = http.StatusNotFound
+			default:
+				code = http.StatusInternalServerError
 			}
+			http.Error(writer, http.StatusText(code), code)
 		}
 	}
 }
