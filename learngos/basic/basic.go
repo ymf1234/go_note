@@ -75,6 +75,11 @@ func triangle() {
 	fmt.Println(c)
 }
 
+func calcTriangle(a, b int) int {
+	c := int(math.Sqrt(float64(a * a + b * b)))
+	return c
+}
+
 /**
    常量的定义
 	const 数值可作为各种类型使用
