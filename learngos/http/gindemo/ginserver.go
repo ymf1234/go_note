@@ -43,5 +43,5 @@ func main() {
 			"message": "hello",
 		})
 	})
-	r.Run()
+	err = r.Run()
 }

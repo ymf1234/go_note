@@ -6,7 +6,7 @@ import (
 )
 
 type OrderItem struct {
-	ID    string  `json:"id"`
+	ID    string  `json:"id,id1"`
 	Name  string  `json:"name"`
 	Price float64 `json:"price"`
 }
@@ -19,6 +19,7 @@ type Order struct {
 }
 
 func main() {
+	marshal()
 	parseNLP()
 }
 
